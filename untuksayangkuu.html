@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Teks Berjalan Modern</title>
+<style>
+  /* Reset dan base */
+  body {
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: #6b7280;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1rem;
+  }
+  .container {
+    max-width: 1200px;
+    width: 100%;
+  }
+  header.hero {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    color: #111827;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 40px;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+  }
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: marqueeAnim 15s linear infinite;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #111827;
+  }
+  /* Pause animasi saat hover */
+  .marquee-wrapper:hover .marquee {
+    animation-play-state: paused;
+  }
+  @keyframes marqueeAnim {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  /* Responsif font size untuk header */
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 4rem;
+    }
+    .marquee {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero" role="banner">
+      <h1>Dear Sayangkuu</h1>
+      <div class="marquee-wrapper" aria-label="Teks Berjalan">
+        <div class="marquee" role="marquee" aria-live="off" aria-relevant="additions removals">
+          Selamat malam sayangkuu,pulangnya jangan malem-malem yaaa,itirahat yang cukupp kurangi ngrokonya  yaaa , semoga hari harimu menyenangkan love you sayanggg.
+        </div>
+      </div>
+    </header>
+  </div>
+</body>
+</html>
+
